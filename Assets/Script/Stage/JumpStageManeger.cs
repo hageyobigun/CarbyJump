@@ -22,12 +22,6 @@ public class JumpStageManeger : MonoBehaviour
         StartCource();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     //コース設定
     private void SettingCource()
     {

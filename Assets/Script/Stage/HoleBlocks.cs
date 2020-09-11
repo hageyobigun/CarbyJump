@@ -13,12 +13,6 @@ public class HoleBlocks : MonoBehaviour
     private bool isReturn = false;
     public int playerPos;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -55,14 +49,14 @@ public class HoleBlocks : MonoBehaviour
     private IEnumerator InHoleBlock()
     {
         isReturn = true;
-        this.GetComponent<PlayerJump>().enabled = false;
+        this.GetComponent<PlayerJumping>().enabled = false;
 
         yield return new WaitForSeconds(1.5f);
 
         this.transform.position = new Vector3(playerPos, 1f, this.transform.position.z - 1);//復帰
         playerCamera.transform.position = this.transform.position;
         playerCamera.transform.position += new Vector3(0f, 4f, 3f);
-        this.GetComponent<PlayerJump>().enabled = true;
+        this.GetComponent<PlayerJumping>().enabled = true;
     }
 
 

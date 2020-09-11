@@ -38,10 +38,10 @@ public class Banana : MonoBehaviour, IAction
 
     private IEnumerator DownTime(GameObject player)
     {
-        player.GetComponent<PlayerJump>().enabled = false;
+        player.GetComponent<PlayerJumping>().enabled = false;
         yield return new WaitForSeconds(downTime);
         this.gameObject.transform.position = new Vector3(0, 100f, 0);
-        player.GetComponent<PlayerJump>().enabled = true;
+        player.GetComponent<PlayerJumping>().enabled = true;
         Destroy(this.gameObject);
     }
 

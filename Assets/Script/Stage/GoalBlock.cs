@@ -28,6 +28,6 @@ public class GoalBlock : MonoBehaviour, IAction
             winText.text = "2P GOAL";
             StartCount.isStart = false;
         }
-        player.GetComponent<PlayerJump>().enabled = false;
+        player.GetComponent<PlayerJumping>().enabled = false;
     }
 }
